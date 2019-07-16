@@ -1,0 +1,16 @@
+.imeges {
+  display: flex;
+  flex-direction: row;
+}
+.Currency-form {
+  display: flex;
+  flex-direction: column;
+}
+.Currency-list,
+.Currency-vales {
+  display: flex;
+  flex-direction: row;
+gap: 15px;
+  justify-content: center;
+  align-items: space-around;
+}
