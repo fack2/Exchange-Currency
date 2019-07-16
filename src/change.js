@@ -10,6 +10,7 @@ const change2 = (data)=>{
 // let a=0;
 // if(data.flag)
     return data.Amount*data.USD2Currency2/data.USD2Currency1;
+    
 // else
     // return data.Amount*data.USD2Currency1/data.USD2Currency2;
 // {

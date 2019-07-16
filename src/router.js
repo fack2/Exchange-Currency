@@ -1,8 +1,7 @@
 
 const {notFound,homePage,publicHandler,cal} = require('./handler')
 const router = ((request, response) => {
-  const  pathname  = request.url;
-
+const  pathname  = request.url;
   if(pathname=="/")
     return homePage(request, response);
     else if(pathname.includes('cal'))
