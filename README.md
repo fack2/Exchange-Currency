@@ -15,8 +15,9 @@
    - index.html
    - style.css
    - script.js
-   - Image folder
-      - image.png
+   - Images
+      - left.png
+      - right.png
  - src folder
    - server.js
    - handler.js
