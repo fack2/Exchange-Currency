@@ -4,8 +4,10 @@
   "description": "Wep application used to convert between currencies .",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/server.js"
+    "start": "nodemon src/server.js",
+    "test": "node src/test.js",
+    "eslint": "eslint src/*",
+    "linter": "eslint --fix ./"
   },
   "repository": {
     "type": "git",
@@ -22,8 +24,8 @@
     "nodemon": "^1.19.1",
     "tap-spec": "^5.0.0",
     "tape": "^4.11.0"
-  },
-  "dependencies": {
     "env2": "^2.2.2"
-  }
+    "eslint": "^6.0.1" 
+  },
+
 }
