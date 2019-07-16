@@ -1,0 +1,29 @@
+{
+  "name": "Exchange-Currency",
+  "version": "1.0.0",
+  "description": "Wep application used to convert between currencies .",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fack2/Exchange-Currency.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fack2/Exchange-Currency/issues"
+  },
+  "homepage": "https://github.com/fack2/Exchange-Currency#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  },
+  "dependencies": {
+    "env2": "^2.2.2"
+  }
+}
