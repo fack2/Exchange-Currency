@@ -1,0 +1,25 @@
+{
+  "name": "Exchange-Currency",
+  "version": "1.0.0",
+  "description": "Wep application used to convert between currencies .",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/test.js",
+    "eslint": "eslint src/*",
+    "linter": "eslint --fix ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fack2/Exchange-Currency.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fack2/Exchange-Currency/issues"
+  },
+  "homepage": "https://github.com/fack2/Exchange-Currency#readme",
+  "devDependencies": {
+    "eslint": "^6.0.1"
+  }
+}
