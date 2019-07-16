@@ -1,10 +1,10 @@
 ## Exchange-Currency 💰
- Wep application used to convert between currencies .
+ Web application used to convert between currencies .
  
  ### Wireframe
  <img src='https://user-images.githubusercontent.com/36266244/61277574-213ed680-a7bb-11e9-805f-a9e87f44723c.jpg' width="400" height ="600">
 
-### User Journey
+### User stories
 1. As a user enter the value he wants on the left side of the site.
 2. As a user select the currencies he wants to compare.
 3. As a user clicks on the change button .
