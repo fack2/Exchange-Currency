@@ -14,8 +14,7 @@
     "url": "git+https://github.com/fack2/Exchange-Currency.git"
   },
   "keywords": [],
-  "author": "", 
-  
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fack2/Exchange-Currency/issues"
@@ -28,6 +27,7 @@
   },
   "dependencies": {
     "env2": "^2.2.2",
-    "eslint": "^6.0.1"
+    "eslint": "^6.0.1",
+    "request": "^2.88.0"
   }
 }
