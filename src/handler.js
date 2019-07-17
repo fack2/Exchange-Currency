@@ -7,8 +7,8 @@ const homePage = (req, res) => {
   const homePagePath = path.join(__dirname, "..", "public/index.html");
   fs.readFile(homePagePath, (err, data) => {
     if (err) {
-      res.writeHead(404, {
-        /////////////////change code
+      // throw err;
+      res.writeHead(500, {
         "Content-Type": "text/html"
       });
       res.end("<h1>ERRORE</h1>");
