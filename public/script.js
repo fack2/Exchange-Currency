@@ -47,13 +47,13 @@ submit.addEventListener('click',(event)=>{
         {
           req(`/cal?c1=${list2Value}&c2=${list1Value}&amount=${c2}`,data=>{
             c1Box.value=data;
-            // imgArrow.src="left.png";
+            imgArrow.src="images/left.png";
           })
         }else 
         {
             req(`/cal?c1=${list1Value}&c2=${list2Value}&amount=${c1}`,data=>{
                 c2Box.value=data;
-                // imgArrow.src="right.png";
+                imgArrow.src="images/right.png";
               }) 
         }
 
