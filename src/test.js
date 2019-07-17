@@ -36,14 +36,14 @@ tape('check status code is 404', (t) => {
 
 
 
-tape('route test - get - header', (t) => {
-	supertest(router)
-		.post('/cal?c1=USD&c2=ILS&a=10')
-		.expect(200)
-		// .expect('Content-Type', 'application/json')
-		.end((err, res) => {
-			t.error(err);
-			t.equal(res.text,'35.4651', 'The result must be 35.4651 ');
-			t.end();
-		});
-});
+// tape('route test - get - header', (t) => {
+// 	supertest(router)
+// 		.post('/cal?c1=USD&c2=ILS&a=10')
+// 		.expect(200)
+// 		// .expect('Content-Type', 'application/json')
+// 		.end((err, res) => {
+// 			t.error(err);
+// 			t.equal(res.text,'35.4651', 'The result must be 35.4651 ');
+// 			t.end();
+// 		});
+// });
