@@ -33,18 +33,23 @@ function initList() {
 
 c1List.addEventListener("change", () => {
   const lowerC1 = c1List.value.toLowerCase();
-  imgC1.src = `https://www.xe.com/themes/xe/images/flags/svg/${lowerC1}.svg`;
+  if (lowerC1 == "ils") imgC1.src = `images/pal.png`;
+  else
+    imgC1.src = `https://www.xe.com/themes/xe/images/flags/svg/${lowerC1}.svg`;
 });
 
 c2List.addEventListener("change", () => {
   const lowerC2 = c2List.value.toLowerCase();
-  imgC2.src = `https://www.xe.com/themes/xe/images/flags/svg/${lowerC2}.svg`;
+  if (lowerC2 == "ils") imgC2.src = `images/pal.png`;
+  else
+    imgC2.src = `https://www.xe.com/themes/xe/images/flags/svg/${lowerC2}.svg`;
 });
 
 submit.addEventListener("click", event => {
   event.preventDefault();
   const c1 = c1Box.value;
   const c2 = c2Box.value;
+
   const list1Value = c1List.value;
   const list2Value = c2List.value;
   if (c1 == c2 && c1 == "") alert("Please write an Amount");
@@ -59,5 +64,4 @@ submit.addEventListener("click", event => {
       imgArrow.src = "images/right.png";
     });
   }
-
 });
