@@ -8,7 +8,6 @@
     "test": "node src/test.js",
     "eslint": "eslint src/*",
     "linter": "eslint --fix ./"
-    
   },
   "repository": {
     "type": "git",
@@ -29,6 +28,7 @@
   },
   "dependencies": {
     "env2": "^2.2.2",
-    "eslint": "^6.0.1"
+    "eslint": "^6.0.1",
+    "request": "^2.88.0"
   }
 }
