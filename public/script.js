@@ -7,7 +7,6 @@ const submit = document.getElementById('submit');
 const c1List = document.getElementById('Currency-dropdown-1');
 const c2List = document.getElementById('Currency-dropdown-2');
 
-
 const req = (url, cb) => {
     fetch(url)
       .then(response => response.json())
