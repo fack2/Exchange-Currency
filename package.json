@@ -14,8 +14,7 @@
     "url": "git+https://github.com/fack2/Exchange-Currency.git"
   },
   "keywords": [],
-  "author": "", 
-  
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fack2/Exchange-Currency/issues"
@@ -23,11 +22,13 @@
   "homepage": "https://github.com/fack2/Exchange-Currency#readme",
   "devDependencies": {
     "nodemon": "^1.19.1",
+    "supertest": "^4.0.2",
     "tap-spec": "^5.0.0",
     "tape": "^4.11.0"
   },
   "dependencies": {
     "env2": "^2.2.2",
-    "eslint": "^6.0.1"
+    "eslint": "^6.0.1",
+    "request": "^2.88.0"
   }
 }
