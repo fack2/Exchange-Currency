@@ -8,6 +8,7 @@
     "test": "node src/test.js",
     "eslint": "eslint src/*",
     "linter": "eslint --fix ./"
+    
   },
   "repository": {
     "type": "git",
