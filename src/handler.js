@@ -2,12 +2,11 @@ const path = require("path");
 const fs = require("fs");
 require("env2")(".env");
 const request = require("request");
-const change = require("./change");
+
 const homePage = (req, res) => {
   const homePagePath = path.join(__dirname, "..", "public/index.html");
   fs.readFile(homePagePath, (err, data) => {
     if (err) {
-      // throw err;
       res.writeHead(500, {
         "Content-Type": "text/html"
       });
@@ -20,7 +19,7 @@ const homePage = (req, res) => {
   });
 };
 
-const cal = (req, res) => {
+const calculate = (req, res) => {
   let endPoint = "cal?c1=USD&c2=ILS&a=10";
   endPoint = endPoint.split("?")[1];
   endPoint = req.url;
@@ -36,7 +35,6 @@ const cal = (req, res) => {
       if (err) {
         return console.log(err);
       }
-      console.log(body.quotes["USD" + c1]);
       const currency = {
         currency1: c1,
         currency2: c2,
@@ -46,7 +44,7 @@ const cal = (req, res) => {
       };
       const result =
         (currency.Amount * currency.USD2Currency2) / currency.USD2Currency1;
-      console.log(result, "55555555555555555555");
+
       res.writeHead(200, {
         "Content-Type": "application/JSON"
       });
@@ -54,7 +52,7 @@ const cal = (req, res) => {
     }
   );
 };
-const defaultList = (req, res, url) => {
+const defaultList = (req, res) => {
   request(
     `http://www.apilayer.net/api/list?access_key=${process.env.API_KEY}`,
     { json: true },
@@ -80,7 +78,6 @@ const publicHandler = (request, response, url) => {
     ico: "image/x-icon"
   };
   const filePath = path.join(__dirname, "../public", url);
-  console.log(filePath, "00000000000");
   fs.readFile(filePath, (error, file) => {
     if (error) {
       response.writeHead(500, { "Content-Type": "text/html" });
@@ -99,4 +96,4 @@ const notFound = (req, res) => {
   res.end(`<h1>ERRORE 404 <br> Page Not Found</h1>`);
 };
 
-module.exports = { notFound, homePage, publicHandler, cal, defaultList };
+module.exports = { notFound, homePage, publicHandler, calculate, defaultList };

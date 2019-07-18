@@ -7,6 +7,13 @@ const submit = document.getElementById("submit");
 const c1List = document.getElementById("Currency-dropdown-1");
 const c2List = document.getElementById("Currency-dropdown-2");
 
+c1Box.addEventListener("keyup", () => {
+  c2Box.value = "";
+});
+c2Box.addEventListener("keyup", () => {
+  c1Box.value = "";
+});
+
 const req = (url, cb) => {
   fetch(url)
     .then(response => response.json())
@@ -14,22 +21,18 @@ const req = (url, cb) => {
     .catch(error => error);
 };
 
-initList();
-
-function initList() {
-  req(`/listOfCurrencies`, data => {
-    data.forEach(element => {
-      const option = document.createElement("option");
-      const option2 = document.createElement("option");
-      option.innerText = element;
-      option2.innerText = element;
-      c1List.appendChild(option);
-      c2List.appendChild(option2);
-    });
-    c2List.value = "JOD";
-    c1List.value = "USD";
+req(`/listOfCurrencies`, data => {
+  data.forEach(element => {
+    const option = document.createElement("option");
+    const option2 = document.createElement("option");
+    option.innerText = element;
+    option2.innerText = element;
+    c1List.appendChild(option);
+    c2List.appendChild(option2);
   });
-}
+  c2List.value = "JOD";
+  c1List.value = "USD";
+});
 
 c1List.addEventListener("change", () => {
   const lowerC1 = c1List.value.toLowerCase();
@@ -52,14 +55,14 @@ submit.addEventListener("click", event => {
 
   const list1Value = c1List.value;
   const list2Value = c2List.value;
-  if (c1 == c2 && c1 == "") alert("Please write an Amount");
+  if (c2 == "" && c1 == "") alert("Please write an Amount");
   else if (c1 == "") {
-    req(`/cal?c1=${list2Value}&c2=${list1Value}&amount=${c2}`, data => {
+    req(`/calculate?c1=${list2Value}&c2=${list1Value}&amount=${c2}`, data => {
       c1Box.value = data;
       imgArrow.src = "images/left.png";
     });
   } else {
-    req(`/cal?c1=${list1Value}&c2=${list2Value}&amount=${c1}`, data => {
+    req(`/calculate?c1=${list1Value}&c2=${list2Value}&amount=${c1}`, data => {
       c2Box.value = data;
       imgArrow.src = "images/right.png";
     });
